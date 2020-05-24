@@ -6,7 +6,6 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    precio = models.DecimalField(max_digits=10, decimal_places=2)
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
